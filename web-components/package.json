@@ -1,0 +1,23 @@
+{
+  "name": "micro-front-end-poc",
+  "version": "1.0.0",
+  "scripts": {
+    "build:all": "npm run build:cdn && npm run build:shell",
+
+    "build:shell": "npm run build --prefix ../app-shell",
+    "start:shell": "http-server ../app-shell/",
+
+    "clean:deps": "rm -rf cdn/v3 || true && mkdir cdn/v3  && mkdir cdn/v3/component-auth  && mkdir cdn/v3/component-home && mkdir cdn/v3/component-slider",
+    "build:cdn": "npm run clean:deps && npm run build:auth && npm run build:home && npm run build:slider",
+    "build:auth": "npm run build:web-component --prefix component-auth && cp component-auth/dist/component.js cdn/v3/component-auth/",
+    "build:home": "npm run build:web-component --prefix component-home && cp component-home/dist/component.js cdn/v3/component-home/",
+    "build:slider": "npm run build:web-component --prefix component-slider && cp component-slider/dist/component.js cdn/v3/component-slider/",
+    "start:cdn": "http-server cdn/ -p 3000"
+  },
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  }
+}

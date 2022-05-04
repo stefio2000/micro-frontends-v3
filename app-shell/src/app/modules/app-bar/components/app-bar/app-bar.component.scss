@@ -1,0 +1,35 @@
+@import "src/assets/styles/aptar-colors";
+
+.app-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background-color: $pharmacy-deep-blue;
+  color: $pharmacy-font;
+}
+
+.app-bar-aptar-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 30px;
+  padding: 10px 0 14px 25px;
+}
+
+.profile {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 45px;
+  padding: 2px 25px 2px 0;
+}
+
+.app-name-container {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  width: 300px;
+  height: 45px;
+}

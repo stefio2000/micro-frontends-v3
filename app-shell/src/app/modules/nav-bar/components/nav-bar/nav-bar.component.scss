@@ -1,0 +1,100 @@
+@import "src/assets/styles/aptar-colors";
+
+.app-nav-bar {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: $pharmacy-background;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  text-align: center;
+}
+
+ul.nav-items {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+
+  li {
+    line-height: 59px;
+    width: 200px;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      color: $pharmacy-font;
+      transition: .5s;
+      font-size: 1.5rem;
+      font-weight: 250;
+      letter-spacing: .05rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 100%;
+        left: 0;
+        background: $pharmacy-primary-action-background;
+        transition: transform 0.5s;
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+
+      &:hover {
+        color: $pharmacy-primary-action-background-darker;
+        font-weight: 350;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+    }
+  }
+}
+
+.inline li {
+  display: inline;
+}
+
+.selected-navigation-item {
+  font-weight: bold !important;
+  border-bottom: 4px solid $pharmacy-primary-action-background-darker;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  ul.nav-items {
+    li {
+      line-height: 59px;
+      width: 120px;
+
+      a {
+        font-size: 1rem;
+        letter-spacing: .05rem;
+
+      }
+    }
+  }
+}
+
+.test {
+  position: relative;
+  top: -33px;
+  left: -25px;
+}

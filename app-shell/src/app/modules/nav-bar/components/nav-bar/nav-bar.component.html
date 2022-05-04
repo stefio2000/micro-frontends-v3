@@ -1,0 +1,12 @@
+<div class="app-nav-bar">
+  <ul class="nav-items inline">
+    <li *ngFor="let navItem of service.navItems" (click)="select(navItem)">
+
+      <a [ngClass]="{'selected-navigation-item': selected && navItem.path.indexOf(selected) > -1}"
+         [routerLink]="navItem.wrapperPath"
+         routerLinkActive="active">
+        <div>{{navItem.name}}</div>
+      </a>
+    </li>
+  </ul>
+</div>

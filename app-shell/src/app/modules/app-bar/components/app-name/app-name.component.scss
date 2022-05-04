@@ -1,0 +1,24 @@
+@import "src/assets/styles/aptar-colors";
+
+.app-name-container {
+  height: 100%;
+}
+
+.app-bar-icon-container {
+  float: left;
+  height: 45px;
+}
+
+.app-bar-app-icon {
+  height: 31px;
+  padding: 7px 0;
+  color: $pharmacy-primary-inline-action-font;
+}
+
+.app-bar-name-container {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  vertical-align: middle;
+  color: $pharmacy-primary-inline-action-font;
+}
